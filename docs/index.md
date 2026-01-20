@@ -23,6 +23,5 @@
     <img src="./images/python_packaging.png" alt="drawing" width="300">
 </p>
 
-
 - - -   ..       # Other markdown pages, images and other files.
 
