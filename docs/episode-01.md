@@ -354,7 +354,7 @@ This section contains your package metadata:
 
 **`README.md`**
 
-```markdown
+```bash
 # kir-pydemo
 
 A demonstration package for DNA sequence analysis, created as part of the Python Packaging Basics training series.
@@ -388,7 +388,7 @@ print(f"Reverse complement: {rev_comp}")  # Output: Reverse complement: GCATGCAT
 ## License
 
 MIT
-```
+```bash
 
 ### Step 5: Install in Editable Mode
 
