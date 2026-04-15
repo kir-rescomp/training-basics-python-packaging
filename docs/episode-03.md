@@ -348,10 +348,12 @@ uv pip install -e ".[dev]"
 
 !!! note-sticky "Quote the Extras"
     On some shells (especially zsh), you need quotes:
-    ```bash
+    <div class="dracula" markdown="1">
+    ```py
     uv pip install "kir-pydemo[bio]"   # Quoted
     uv pip install -e ".[dev]"         # Quoted
     ```
+    </div>
 
 ## 📝 requirements.txt vs pyproject.toml
 
