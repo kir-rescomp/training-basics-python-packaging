@@ -205,6 +205,7 @@ TOTAL                          75     31    59%
 
 Create `tests/test_cli.py`:
 
+<div class="dracula" markdown="1">
 ```python
 """Tests for command-line interface."""
 
@@ -259,6 +260,7 @@ def test_version_flag(capsys):
     
     assert exc_info.value.code == 0
 ```
+</div>
 
 ## 🎨 Code Formatting
 
@@ -266,7 +268,8 @@ def test_version_flag(capsys):
 
 [Black](https://black.readthedocs.io/) formats Python code automatically:
 
-```bash
+<div class="nord" markdown="1">
+```py
 # Format all files
 black src/ tests/
 
@@ -276,8 +279,10 @@ black --check src/ tests/
 # Show diff
 black --diff src/ tests/
 ```
+</div>
 
 **Before:**
+<div class="dracula" markdown="1">
 ```python
 def gc_content(sequence:str)->float:
     if not sequence:raise ValueError("Sequence cannot be empty")
@@ -293,12 +298,14 @@ def gc_content(sequence: str) -> float:
     sequence = sequence.upper()
     return (sequence.count('G') + sequence.count('C')) / len(sequence) * 100
 ```
+</div>
 
 ### Ruff - Fast Python Linter
 
 [Ruff](https://docs.astral.sh/ruff/) is an extremely fast linter that checks for errors and style issues:
 
-```bash
+<div class="dracula" markdown="1">
+```py
 # Lint all files
 ruff check src/ tests/
 
@@ -308,15 +315,16 @@ ruff check --fix src/ tests/
 # Format code (alternative to black)
 ruff format src/ tests/
 ```
+</div>
 
-**Common issues it catches:**
+!!! rectangle-list "Common issues it catches:"
 
-- Unused imports
-- Undefined variables
-- F-string errors
-- Import sorting
-- Line length
-- And 800+ more rules!
+    - Unused imports
+    - Undefined variables
+    - F-string errors
+    - Import sorting
+    - Line length
+    - And 800+ more rules!
 
 ### Configuration in pyproject.toml
 
