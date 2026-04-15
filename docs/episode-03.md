@@ -242,6 +242,7 @@ def read_fasta(filepath: Path) -> List[Tuple[str, str]]:
 
 Update `src/kir_pydemo/cli.py` to support FASTA files:
 
+<div class="dracula" markdown="1">
 ```python
 # Add to the gc-content subcommand
 gc_parser.add_argument(
@@ -271,6 +272,7 @@ def cmd_gc_content(args: argparse.Namespace) -> int:
     
     # ... rest of the function
 ```
+</div>
 
 ## 🌍 Virtual Environments
 
@@ -321,46 +323,32 @@ pip install -e ".[dev]"
 deactivate
 ```
 
-#### Using conda
-
-```bash
-# Create environment with specific Python version
-conda create -n kir-pydemo python=3.11
-
-# Activate
-conda activate kir-pydemo
-
-# Install package
-pip install -e ".[dev]"
-
-# Deactivate
-conda deactivate
-```
-
 ### Installing with Extras
 
-```bash
+<div class="dracula" markdown="1">
+```py
 # Install just the package
-pip install kir-pydemo
+uv pip install kir-pydemo
 
 # Install with bio support
-pip install kir-pydemo[bio]
+uv pip install kir-pydemo[bio]
 
 # Install with multiple extras
-pip install kir-pydemo[bio,plotting]
+uv pip install kir-pydemo[bio,plotting]
 
 # Install everything
-pip install kir-pydemo[all]
+uv pip install kir-pydemo[all]
 
 # For development (editable install with dev tools)
-pip install -e ".[dev]"
+uv pip install -e ".[dev]"
 ```
+</div>
 
-!!! note "Quote the Extras"
+!!! note-sticky "Quote the Extras"
     On some shells (especially zsh), you need quotes:
     ```bash
-    pip install "kir-pydemo[bio]"   # Quoted
-    pip install -e ".[dev]"         # Quoted
+    uv pip install "kir-pydemo[bio]"   # Quoted
+    uv pip install -e ".[dev]"         # Quoted
     ```
 
 ## 📝 requirements.txt vs pyproject.toml
