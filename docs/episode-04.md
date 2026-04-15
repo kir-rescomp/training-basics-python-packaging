@@ -330,6 +330,7 @@ ruff format src/ tests/
 
 Add tool configurations to `pyproject.toml`:
 
+<div class="monokai" markdown="1">
 ```toml
 [tool.black]
 line-length = 100
@@ -382,6 +383,7 @@ exclude_lines = [
     "if TYPE_CHECKING:",
 ]
 ```
+</div>
 
 ## 🔍 Type Checking with mypy
 
