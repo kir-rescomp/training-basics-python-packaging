@@ -169,7 +169,8 @@ tests/test_sequence.py ............                      [100%]
 
 See which parts of your code are tested:
 
-```bash
+<div class="dracula" markdown="1">
+```python
 # Run tests with coverage
 pytest --cov=kir_pydemo
 
@@ -180,6 +181,7 @@ pytest --cov=kir_pydemo --cov-report=html
 open htmlcov/index.html  # Mac
 xdg-open htmlcov/index.html  # Linux
 ```
+</div>
 
 **Output:**
 ```
