@@ -9,7 +9,7 @@
     - Handle version constraints properly
     - Understand the difference between package and development dependencies
 
-## 🎬 Sarah's Growing Package
+## 🎬 Adding new/more features 
 
 Dr. Sarah's `kir-pydemo` package is getting popular! Now she wants to add some new features:
 
@@ -73,6 +73,7 @@ For `kir-pydemo`, let's say we want to add:
 
 ### Step 2: Update pyproject.toml
 
+<div class="dracula" markdown="1">
 ```toml
 [build-system]
 requires = ["setuptools>=61.0"]
@@ -131,6 +132,7 @@ Documentation = "https://kir-pydemo.readthedocs.io"
 Repository = "https://github.com/bmrc/kir-pydemo"
 Issues = "https://github.com/bmrc/kir-pydemo/issues"
 ```
+</div>
 
 ### Step 3: Version Constraints
 
