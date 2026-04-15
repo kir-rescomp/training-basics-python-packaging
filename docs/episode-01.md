@@ -41,13 +41,15 @@ Sarah copies this file into each new analysis project. But there are problems:
 
 ## 📦 What is Python Packaging?
 
-Python packaging is the process of bundling your code so it can be:
+!!! circle-info ""
 
-- **Installed** with `pip install`
-- **Imported** in any Python script: `import kir_pydemo`
-- **Versioned** and tracked
-- **Shared** with colleagues or the world
-- **Managed** with proper dependencies
+    Python packaging is the process of bundling your code so it can be:
+
+    - **Installed** with `pip install` ( or a more moden implementation `uv pip install`)
+    - **Imported** in any Python script: `import kir_pydemo`
+    - **Versioned** and tracked
+    - **Shared** with colleagues or the world
+    - **Managed** with proper dependencies
 
 ## 🏗️ Modern Python Packaging: The Evolution
 
@@ -67,13 +69,13 @@ setup(
 )
 ```
 
-**Problems with setup.py:**
+!!! anchor-exclaim "Problems with setup.py:"
 
-- Mixes configuration with executable code
-- Different tools had different formats
-- Security concerns (executes arbitrary Python)
-- Hard to parse by automated tools
-
+    - Mixes configuration with executable code
+    - Different tools had different formats
+    - Security concerns (executes arbitrary Python)
+    - Hard to parse by automated tools
+    
 ### The Modern Way: pyproject.toml
 
 **PEP 517** and **PEP 518** introduced `pyproject.toml`, a declarative, standardized format:
