@@ -40,11 +40,9 @@
     - Installing in editable mode
 
     **You'll create:** A basic installable package
-
     
-
 -   __[Episode 2: Entry Points & CLI Tools](episode-02.md)__
-    
+
     ---
     **Duration:** ~30 minutes
 
