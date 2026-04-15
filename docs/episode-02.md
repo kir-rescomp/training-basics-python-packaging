@@ -117,6 +117,7 @@ This follows a **subcommand pattern** (like `git commit`, `git push`) which is c
 
 Create a new file `src/kir_pydemo/cli.py`:
 
+<div class="dracula" markdown="1">
 ```python
 """Command-line interface for kir-pydemo."""
 
@@ -265,6 +266,7 @@ def main() -> int:
 if __name__ == "__main__":
     sys.exit(main())
 ```
+</div>
 
 !!! tip "CLI Design Principles"
     This CLI follows good practices:
@@ -279,6 +281,7 @@ if __name__ == "__main__":
 
 Add the entry point configuration to `pyproject.toml`:
 
+<div class="dracula" markdown="1">
 ```toml
 [build-system]
 requires = ["setuptools>=61.0"]
@@ -317,6 +320,7 @@ Documentation = "https://kir-pydemo.readthedocs.io"
 Repository = "https://github.com/bmrc/kir-pydemo"
 Issues = "https://github.com/bmrc/kir-pydemo/issues"
 ```
+</div>
 
 The key addition is:
 
@@ -333,10 +337,10 @@ Since we've added a new entry point, we need to reinstall:
 
 ```bash
 # If you're in editable mode, reinstall to pick up the new entry point
-pip install -e .
+uv pip install -e .
 ```
 
-!!! note "Why Reinstall?"
+!!! note-sticky "Why Reinstall?"
     Entry points are created during installation. Changes to code are reflected immediately in editable mode, but changes to entry points in pyproject.toml require reinstallation.
 
 ### Step 4: Test Your CLI
