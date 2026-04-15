@@ -34,13 +34,14 @@ A colleague suggests: "You need automated testing and code quality tools!"
 We already added it to our `[dev]` extras:
 
 ```bash
-pip install -e ".[dev]"
+uv pip install -e ".[dev]"
 ```
 
 ### Step 1: Create Test Files
 
 Create `tests/test_sequence.py`:
 
+<div class="dracula" markdown="1">
 ```python
 """Tests for sequence analysis functions."""
 
@@ -123,6 +124,7 @@ class TestReverseComplement:
         """Test individual bases and small sequences."""
         assert reverse_complement(sequence) == expected
 ```
+</div>
 
 !!! tip "Test Organization"
     - Group related tests in classes
@@ -132,7 +134,8 @@ class TestReverseComplement:
 
 ### Step 2: Run Tests
 
-```bash
+<div class="dracula" markdown="1">
+```py
 # Run all tests
 pytest
 
@@ -148,9 +151,11 @@ pytest tests/test_sequence.py::TestGCContent::test_basic_gc_content
 # Run tests matching a pattern
 pytest -k "gc_content"
 ```
+</div>
 
 **Output:**
-```
+<div class="nord" markdown="1">
+```py
 ===================== test session starts ======================
 collected 12 items
 
@@ -158,6 +163,7 @@ tests/test_sequence.py ............                      [100%]
 
 ===================== 12 passed in 0.03s ======================
 ```
+</div>
 
 ### Step 3: Code Coverage
 
