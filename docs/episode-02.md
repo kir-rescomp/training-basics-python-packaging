@@ -348,7 +348,8 @@ uv pip install -e .
 
 Now test the new command-line interface:
 
-```bash
+<div class="nord" markdown="1">
+```py
 # Get help
 kir-pydemo --help
 
@@ -368,7 +369,7 @@ kir-pydemo --help
 #     reverse-complement  get reverse complement of a DNA sequence
 ```
 
-```bash
+```py
 # Calculate GC content
 kir-pydemo gc-content ATGCATGC
 # Output: GC content: 50.00%
@@ -385,6 +386,7 @@ kir-pydemo reverse-complement ATGCATGC
 kir-pydemo --version
 # Output: kir-pydemo 0.1.0
 ```
+</div>
 
 ### Step 5: Test File Input
 
