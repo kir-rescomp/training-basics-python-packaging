@@ -1198,7 +1198,7 @@
 .md-typeset .door-open > .admonition-title,
 .md-typeset .door-open > summary {
   color:rgb(236, 240, 219);
-  background-color: rgb(27, 112, 168);
+  background-color: rgb(25, 89, 173);
 }
 .md-typeset .door-open > .admonition-title::before,
 .md-typeset .door-open > summary::before {
