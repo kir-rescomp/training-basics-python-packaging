@@ -30,3 +30,4 @@
 | [Episode 1](episode-01.md)            | Project Structure & pyproject.toml       |                                                              |
 | [Episode 2](episode-02.md)            | Entry Points & CLI Tools                 |                                                              |
 | [Episode 3](episode-03.md)            | Dependecied and Environments             |                                                              |
+| [Episode 4](episode-04.md)            | Testing & Quality Assurance              |                                                              |
