@@ -42,27 +42,31 @@ kir-pydemo gc-content ATGCATGC
 # Output: GC content: 50.0%
 ```
 </div>
+
+
 **The solution?** Add command-line interface (CLI) capabilities using **entry points**!
 
 ## 🔌 What are Entry Points?
 
-**Entry points** are a mechanism for making Python functions executable from the command line. When you install a package with entry points, Python automatically creates executable scripts that can be run directly from your terminal.
+!!! door-open "**Entry points** are a mechanism for making Python functions executable from the command line. When you install a package with entry points, Python automatically creates executable scripts that can be run directly from your terminal."
 
-### Types of Entry Points
+    ### Types of Entry Points
 
-1. **Console Scripts** (most common)
-   - Create command-line executables
-   - Example: `kir-pydemo`, `pytest`, `black`
+    1. **Console Scripts** (most common)
+        - Create command-line executables
+        - Example: `kir-pydemo`, `pytest`, `black`
 
-2. **GUI Scripts** (for graphical applications)
-   - Similar to console scripts but for GUI apps
-   - On Windows, doesn't open a console window
+    2. **GUI Scripts** (for graphical applications)
+        - Similar to console scripts but for GUI apps
+        - On Windows, doesn't open a console window
 
-3. **Plugin Entry Points** (for extensibility)
-   - Allow other packages to discover and use your code
-   - Used by frameworks like pytest, Sphinx
+    3. **Plugin Entry Points** (for extensibility)
+        - Allow other packages to discover and use your code
+        - Used by frameworks like pytest, Sphinx
 
-We'll focus on **console scripts** in this episode.
+    <br>
+    
+    - We'll focus on **console scripts** in this episode.
 
 ### How Entry Points Work
 
