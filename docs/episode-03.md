@@ -419,7 +419,8 @@ Modern tools provide lock files for reproducible installs:
 
 ### Poetry (poetry.lock)
 
-```bash
+<div class="dracula" markdown="1">
+```python
 # Install poetry
 pip install poetry
 
@@ -434,7 +435,7 @@ poetry add numpy
 
 ### PDM (pdm.lock)
 
-```bash
+```python
 # Install pdm
 pip install pdm
 
@@ -449,7 +450,7 @@ pdm add numpy
 
 ### pip-tools (requirements.txt + requirements.in)
 
-```bash
+```py
 # Install pip-tools
 pip install pip-tools
 
@@ -462,8 +463,9 @@ pip-compile requirements.in
 # Install exact versions
 pip-sync requirements.txt
 ```
+</div>
 
-!!! info "Lock Files in Practice"
+!!! circle-info "Lock Files in Practice"
     For `kir-pydemo` (a library), we don't commit lock files to the repository. For applications, lock files ensure everyone uses identical dependency versions.
 
 ## 📋 Checkpoint: What Have We Achieved?
