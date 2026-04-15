@@ -548,8 +548,8 @@ git commit -m "Add feature X"
 ### Makefile for Common Tasks
 
 Create a `Makefile`:
-
-```makefile
+<div class="nord" markdown="1">
+```yaml
 .PHONY: test coverage format lint type-check clean install
 
 install:
@@ -580,6 +580,7 @@ clean:
 
 all: format lint type-check test
 ```
+</div>
 
 Usage:
 
