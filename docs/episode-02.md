@@ -414,6 +414,7 @@ Let's break down the key components of our CLI implementation:
 
 ### ArgumentParser
 
+<div class="dracula" markdown="1">
 ```python
 parser = argparse.ArgumentParser(
     prog="kir-pydemo",  # Program name shown in help
@@ -447,6 +448,7 @@ parser.add_argument(
     help="read sequences from file",
 )
 ```
+</div>
 
 ### Argument Types
 
@@ -462,6 +464,7 @@ While argparse is in the standard library, there are modern alternatives:
 
 [Click](https://click.palletsprojects.com/) is a popular framework with a decorator-based syntax:
 
+<div class="dracula" markdown="1">
 ```python
 import click
 from kir_pydemo import gc_content
@@ -509,6 +512,7 @@ def gc_content_cmd(
 if __name__ == "__main__":
     app()
 ```
+</div>
 
 **Pros:** Type-safe, modern, great IDE support
 **Cons:** Requires Python 3.6+, external dependency
