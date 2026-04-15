@@ -1216,12 +1216,12 @@
 }
 .md-typeset .square-plus > .admonition-title,
 .md-typeset .square-plus > summary {
-  color:rgb(236, 240, 219);
-  background-color: rgb(25, 89, 173);
+  color:rgb(23, 27, 5);
+  background-color: rgb(247, 211, 11);
 }
 .md-typeset .square-plus > .admonition-title::before,
 .md-typeset .square-plus > summary::before {
-  background-color: rgb(202, 235, 165);
+  background-color: rgb(99, 90, 7);
   -webkit-mask-image: var(--md-admonition-icon--square-plus);
           mask-image: var(--md-admonition-icon--square-plus);
 }

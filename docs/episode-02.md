@@ -322,14 +322,15 @@ Issues = "https://github.com/bmrc/kir-pydemo/issues"
 ```
 </div>
 
-The key addition is:
+!!! square-plus "The key addition is:"
 
-```toml
-[project.scripts]
-kir-pydemo = "kir_pydemo.cli:main"
-```
+    ```toml
+    [project.scripts]
+    kir-pydemo = "kir_pydemo.cli:main"
+    ```
 
-This says: *"Create an executable called `kir-pydemo` that calls the `main()` function in `kir_pydemo.cli`"*
+    This says: 
+    >*"Create an executable called `kir-pydemo` that calls the `main()` function in `kir_pydemo.cli`"*
 
 ### Step 3: Reinstall the Package
 
