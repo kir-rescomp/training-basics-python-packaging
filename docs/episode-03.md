@@ -422,7 +422,7 @@ Modern tools provide lock files for reproducible installs:
 <div class="dracula" markdown="1">
 ```python
 # Install poetry
-pip install poetry
+uv pip install poetry
 
 # Initialize
 poetry init
@@ -437,7 +437,7 @@ poetry add numpy
 
 ```python
 # Install pdm
-pip install pdm
+uv pip install pdm
 
 # Initialize
 pdm init
@@ -452,16 +452,16 @@ pdm add numpy
 
 ```py
 # Install pip-tools
-pip install pip-tools
+uv  pip install pip-tools
 
 # Create requirements.in (loose)
 echo "numpy>=1.20.0" > requirements.in
 
 # Generate requirements.txt (pinned)
-pip-compile requirements.in
+uv pip-compile requirements.in
 
 # Install exact versions
-pip-sync requirements.txt
+uv pip-sync requirements.txt
 ```
 </div>
 
