@@ -1,6 +1,6 @@
 # Episode 3: Dependencies & Environments
 
-!!! info "Learning Objectives"
+!!! clipboard-list "Learning Objectives"
     By the end of this episode, you will:
     
     - Understand how to specify package dependencies
@@ -170,6 +170,7 @@ dependencies = [
 
 Create a new module `src/kir_pydemo/io.py` that uses biopython:
 
+<div class="dracula" markdown="1">
 ```python
 """File I/O utilities for sequence data."""
 
@@ -225,6 +226,7 @@ def read_fasta(filepath: Path) -> List[Tuple[str, str]]:
     
     return sequences
 ```
+</div>
 
 !!! tip "Graceful Degradation"
     Notice the pattern:
