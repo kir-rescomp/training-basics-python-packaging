@@ -372,73 +372,74 @@ Now when you create a release on GitHub, it automatically publishes to PyPI!
 
 ### README.md with Badges
 
-Enhance your README with status badges:
+??? readme "Enhance your README with status badges:"
 
-```markdown
-# kir-pydemo
+    ```markdown
+    # kir-pydemo
 
-[![CI](https://github.com/bmrc/kir-pydemo/workflows/CI/badge.svg)](https://github.com/bmrc/kir-pydemo/actions)
-[![codecov](https://codecov.io/gh/bmrc/kir-pydemo/branch/main/graph/badge.svg)](https://codecov.io/gh/bmrc/kir-pydemo)
-[![PyPI version](https://badge.fury.io/py/kir-pydemo.svg)](https://pypi.org/project/kir-pydemo/)
-[![Python versions](https://img.shields.io/pypi/pyversions/kir-pydemo.svg)](https://pypi.org/project/kir-pydemo/)
-[![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+    [![CI](https://github.com/bmrc/kir-pydemo/workflows/CI/badge.svg)](https://github.com/bmrc/kir-pydemo/actions)
+    [![codecov](https://codecov.io/gh/bmrc/kir-pydemo/branch/main/graph/badge.svg)](https://codecov.io/gh/bmrc/kir-pydemo)
+    [![PyPI version](https://badge.fury.io/py/kir-pydemo.svg)](https://pypi.org/project/kir-pydemo/)
+    [![Python versions](https://img.shields.io/pypi/pyversions/kir-pydemo.svg)](https://pypi.org/project/kir-pydemo/)
+    [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
-A demonstration package for DNA sequence analysis.
+    A demonstration package for DNA sequence analysis.
 
-## Features
+    ## Features
 
-- Calculate GC content of DNA sequences
-- Generate reverse complement of DNA sequences
-- Command-line interface for quick analysis
-- FASTA file support
+    - Calculate GC content of DNA sequences
+    - Generate reverse complement of DNA sequences
+    - Command-line interface for quick analysis
+    - FASTA file support
 
-## Installation
+    ## Installation
 
-```bash
-pip install kir-pydemo
-```
+      ```bash
+      pip install kir-pydemo
+      ```
 
-With optional dependencies:
-```bash
-pip install kir-pydemo[bio]  # FASTA support
-```
+    With optional dependencies:
+      ```bash
+      pip install kir-pydemo[bio]  # FASTA support
+      ```
 
-## Quick Start
+    ## Quick Start
 
-```python
-from kir_pydemo import gc_content, reverse_complement
+      ```python
+      from kir_pydemo import gc_content, reverse_complement
 
-# Calculate GC content
-gc = gc_content("ATGCATGC")
-print(f"GC content: {gc}%")  # GC content: 50.0%
+      # Calculate GC content
+      gc = gc_content("ATGCATGC")
+      print(f"GC content: {gc}%")  # GC content: 50.0%
 
-# Get reverse complement
-rev = reverse_complement("ATGC")
-print(rev)  # GCAT
-```
+      # Get reverse complement
+      rev = reverse_complement("ATGC")
+      print(rev)  # GCAT
+      ```
 
-### Command Line
+    ### Command Line
 
-```bash
-# Calculate GC content
-kir-pydemo gc-content ATGCATGC
+      ```bash
+      # Calculate GC content
+      kir-pydemo gc-content ATGCATGC
 
-# Reverse complement
-kir-pydemo reverse-complement ATGCATGC
-```
+      # Reverse complement
+      kir-pydemo reverse-complement ATGCATGC
+      ```
+    ```
 
-## Documentation
-
-Full documentation available at https://kir-pydemo.readthedocs.io
-
-## Contributing
-
-Contributions welcome! Please read [CONTRIBUTING.md](CONTRIBUTING.md).
-
-## License
-
-MIT License - see [LICENSE](LICENSE) file.
-```
+    ## Documentation
+    
+    Full documentation available at https://kir-pydemo.readthedocs.io
+    
+    ## Contributing
+    
+    Contributions welcome! Please read [CONTRIBUTING.md](CONTRIBUTING.md).
+    
+    ## License
+    
+    MIT License - see [LICENSE](LICENSE) file.
+    ```
 
 ### Sphinx Documentation
 

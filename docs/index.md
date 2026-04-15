@@ -31,3 +31,4 @@
 | [Episode 2](episode-02.md)            | Entry Points & CLI Tools                 |                                                              |
 | [Episode 3](episode-03.md)            | Dependecied and Environments             |                                                              |
 | [Episode 4](episode-04.md)            | Testing & Quality Assurance              |                                                              |
+| [Episode 5](episode-05.md)            | Building & Distribution                  |                                                              |
