@@ -440,6 +440,7 @@ pip install pre-commit
 
 ### Step 2: Create .pre-commit-config.yaml
 
+<div class="nord" markdown="1">
 ```yaml
 # .pre-commit-config.yaml
 repos:
@@ -470,6 +471,7 @@ repos:
       - id: mypy
         additional_dependencies: [types-all]
 ```
+</div>
 
 ### Step 3: Install the hooks
 
