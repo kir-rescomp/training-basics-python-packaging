@@ -1,6 +1,6 @@
 # Episode 2: Entry Points & CLI Tools
 
-!!! info "Learning Objectives"
+!!! clipboard-list "Learning Objectives"
     By the end of this episode, you will:
     
     - Understand what entry points are and why they're useful
@@ -17,6 +17,7 @@ Dr. Sarah's colleagues love the `kir-pydemo` package! But they have a request:
 
 Currently, they have to write a Python script every time:
 
+<div class="dracula" markdown="1">
 ```python
 # analyze.py - Have to create this every time!
 from kir_pydemo import gc_content
@@ -27,18 +28,20 @@ result = gc_content(sequence)
 print(result)
 ```
 
-```bash
+```py
 python analyze.py ATGCATGC
 # Output: 50.0
 ```
 
+
 **Wouldn't it be better if they could just run:**
 
-```bash
+
+```py
 kir-pydemo gc-content ATGCATGC
 # Output: GC content: 50.0%
 ```
-
+</div>
 **The solution?** Add command-line interface (CLI) capabilities using **entry points**!
 
 ## 🔌 What are Entry Points?
