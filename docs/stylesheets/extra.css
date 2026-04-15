@@ -1178,8 +1178,8 @@
 }
 .md-typeset .note-sticky > .admonition-title,
 .md-typeset .note-sticky > summary {
-  color:rgb(240, 247, 205);
-  background-color: rgb(11, 140, 226);
+  color:rgb(233, 236, 214);
+  background-color: rgb(24, 152, 236);
 }
 .md-typeset .note-sticky > .admonition-title::before,
 .md-typeset .note-sticky > summary::before {
