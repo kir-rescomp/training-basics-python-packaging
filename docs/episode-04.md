@@ -435,7 +435,7 @@ ignore_missing_imports = true
 ### Step 1: Install pre-commit
 
 ```bash
-pip install pre-commit
+uv pip install pre-commit
 ```
 
 ### Step 2: Create .pre-commit-config.yaml
