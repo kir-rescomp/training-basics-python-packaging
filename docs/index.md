@@ -25,10 +25,75 @@
 
 ## Episodes
 
-| Episode                               | Topic                                    | Key concepts                                                 |
-| ------------------------------------- | ---------------------------------------- | ------------------------------------------------------------ |
-| [Episode 1](episode-01.md)            | Project Structure & pyproject.toml       |                                                              |
-| [Episode 2](episode-02.md)            | Entry Points & CLI Tools                 |                                                              |
-| [Episode 3](episode-03.md)            | Dependecied and Environments             |                                                              |
-| [Episode 4](episode-04.md)            | Testing & Quality Assurance              |                                                              |
-| [Episode 5](episode-05.md)            | Building & Distribution                  |                                                              |
+!!! circle-info ""
+
+    ### [Episode 1: Project Structure & pyproject.toml](episode-01.md)
+    
+    **Duration:** ~45 minutes
+    
+    Learn the foundation of modern Python packaging:
+    
+    - Understanding pyproject.toml vs setup.py
+    - The src/ layout pattern
+    - Package metadata and configuration
+    - Installing in editable mode
+    
+    **You'll create:** A basic installable package
+    
+    ---
+    
+    ### [Episode 2: Entry Points & CLI Tools](episode-02.md)
+    
+    **Duration:** ~30 minutes
+    
+    Make your package executable from the command line:
+    
+    - Console scripts and entry points
+    - Command-line argument parsing
+    - Building user-friendly CLIs
+    
+    **You'll create:** Command-line tools for sequence analysis
+    
+    ---
+    
+    ### [Episode 3: Dependencies & Environments](episode-03.md)
+    
+    **Duration:** ~40 minutes
+    
+    Master dependency management:
+    
+    - Specifying dependencies in pyproject.toml
+    - Optional dependencies and extras
+    - Virtual environments best practices
+    - Lock files and reproducibility
+    
+    **You'll create:** A properly managed dependency structure
+    
+    ---
+    
+    ### [Episode 4: Testing & Quality](episode-04.md)
+    
+    **Duration:** ~50 minutes
+    
+    Ensure code quality and reliability:
+    
+    - Adding tests with pytest
+    - Code formatting with black/ruff
+    - Type checking with mypy
+    - Pre-commit hooks for automation
+    
+    **You'll create:** A tested, quality-controlled package
+    
+    ---
+    
+    ### [Episode 5: Building & Distribution](episode-05.md)
+    
+    **Duration:** ~45 minutes
+    
+    Share your package with the world:
+    
+    - Building wheels and source distributions
+    - Version management strategies
+    - Publishing to PyPI
+    - Documentation with Sphinx
+    

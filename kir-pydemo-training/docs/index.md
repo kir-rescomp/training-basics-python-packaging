@@ -140,25 +140,7 @@ This training is designed for:
 
 You should know basic Python, but you don't need prior packaging experience.
 
-## 📖 Using This Documentation
 
-### Online
-
-You can read this documentation online or serve it locally:
-
-```bash
-# Install MkDocs Material
-pip install mkdocs-material
-
-# Serve the documentation
-mkdocs serve
-
-# Visit http://127.0.0.1:8000 in your browser
-```
-
-### Offline
-
-All content is also available as Markdown files in the `docs/` directory.
 
 ## 🤔 Getting Help
 
