@@ -437,10 +437,12 @@ The `-e` flag means **editable mode** (also called **development mode**):
 
 Now test that everything works:
 
+<div class="dracula" markdown="1">
 ```python
 # Open a Python interpreter from anywhere (not in the project directory!)
 python
-
+```
+```python
 >>> from kir_pydemo import gc_content, reverse_complement
 >>> gc_content("ATGCATGC")
 50.0
@@ -450,8 +452,9 @@ python
 >>> kir_pydemo.__version__
 '0.1.0'
 ```
+</div>
 
-Success! Your package is installed and importable from anywhere on your system.
+!!! check-to-slot "Success! Your package is installed and importable from anywhere on your system."
 
 ## 📋 Checkpoint: What Have We Achieved?
 
