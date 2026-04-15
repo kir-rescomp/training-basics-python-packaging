@@ -9,7 +9,7 @@
     <span style="display: inline-block; animation: pulse 2s ease-in-out infinite;">🚧</span>
     Work in Progress
   </p>
-  <p>This repository is under active development.<br>Expected completion: <strong>10th of February 2026</strong></p>
+  <p>This repository is under active development.<br>Expected completion: <strong>20th of April 2026</strong></p>
 </div>
 
 <style>
@@ -23,4 +23,9 @@
     <img src="./images/python_packaging.png" alt="drawing" width="300">
 </p>
 
+## Episodes
 
+| Episode                               | Topic                                    | Key concepts                                                 |
+| ------------------------------------- | ---------------------------------------- | ------------------------------------------------------------ |
+| [Episode 1](episode-01.md)            | Project Structure & pyproject.toml       |                                                              |
+| [Episode 2](episode-02.md)            | Entry Points & CLI Tools                 |                                                              |
