@@ -41,13 +41,15 @@ Sarah copies this file into each new analysis project. But there are problems:
 
 ## 📦 What is Python Packaging?
 
-Python packaging is the process of bundling your code so it can be:
+!!! circle-info ""
 
-- **Installed** with `pip install`
-- **Imported** in any Python script: `import kir_pydemo`
-- **Versioned** and tracked
-- **Shared** with colleagues or the world
-- **Managed** with proper dependencies
+    Python packaging is the process of bundling your code so it can be:
+
+    - **Installed** with `pip install` ( or a more moden implementation `uv pip install`)
+    - **Imported** in any Python script: `import kir_pydemo`
+    - **Versioned** and tracked
+    - **Shared** with colleagues or the world
+    - **Managed** with proper dependencies
 
 ## 🏗️ Modern Python Packaging: The Evolution
 
@@ -67,12 +69,12 @@ setup(
 )
 ```
 
-**Problems with setup.py:**
+!!! anchor-exclaim "Problems with setup.py:"
 
-- Mixes configuration with executable code
-- Different tools had different formats
-- Security concerns (executes arbitrary Python)
-- Hard to parse by automated tools
+    - Mixes configuration with executable code
+    - Different tools had different formats
+    - Security concerns (executes arbitrary Python)
+    - Hard to parse by automated tools
 
 ### The Modern Way: pyproject.toml
 
@@ -152,8 +154,8 @@ Now you **must** install the package to import it, catching installation issues 
     - **Package name** (for PyPI): Can use hyphens: `kir-pydemo`
     - **Import name** (in Python): Must use underscores: `kir_pydemo`
     
-    ```bash
-    pip install kir-pydemo      # Install with hyphens
+    ```py
+    uv pip install kir-pydemo      # Install with hyphens
     ```
     
     ```python
@@ -164,7 +166,7 @@ Now you **must** install the package to import it, catching installation issues 
 
 ### Step 1: Create the Directory Structure
 
-```bash
+```python
 # Create the project directory
 mkdir kir-pydemo
 cd kir-pydemo
@@ -352,9 +354,11 @@ This section contains your package metadata:
 
 ### Step 4: Add a README
 
+</div>
+
 **`README.md`**
 
-```bash
+```
 # kir-pydemo
 
 A demonstration package for DNA sequence analysis, created as part of the Python Packaging Basics training series.
@@ -366,12 +370,14 @@ A demonstration package for DNA sequence analysis, created as part of the Python
 
 ## Installation
 
-```bash
-pip install kir-pydemo
+    ```bash
+    uv pip install kir-pydemo
+    ```
 ```
 
 ## Usage
 
+<div class="dracula" markdown="1">
 ```python
 from kir_pydemo import gc_content, reverse_complement
 
@@ -384,23 +390,25 @@ print(f"GC content: {gc}%")  # Output: GC content: 50.0%
 rev_comp = reverse_complement(sequence)
 print(f"Reverse complement: {rev_comp}")  # Output: Reverse complement: GCATGCAT
 ```
+</div>
 
 ## License
 
 MIT
-```bash
+
 
 ### Step 5: Install in Editable Mode
 
 Now comes the magic moment - installing your package!
 
-```bash
+<div class="dracula" markdown="1">
+```py
 # Make sure you're in the kir-pydemo directory
 cd /path/to/kir-pydemo
-
 # Install in editable mode
-pip install -e .
+uv pip install -e .
 ```
+</div>
 
 The `-e` flag means **editable mode** (also called **development mode**):
 
@@ -413,14 +421,14 @@ The `-e` flag means **editable mode** (also called **development mode**):
     
     ```bash
     # Create a virtual environment
-    python -m venv venv
+    uv venv venv
     
     # Activate it
     source venv/bin/activate  # On Linux/Mac
     venv\Scripts\activate     # On Windows
     
     # Now install
-    pip install -e .
+    uv pip install -e .
     ```
     
     We'll cover this more in Episode 3!
