@@ -429,15 +429,15 @@ Now when you create a release on GitHub, it automatically publishes to PyPI!
     ```
 
     ## Documentation
-    
+
     Full documentation available at https://kir-pydemo.readthedocs.io
-    
+
     ## Contributing
-    
+
     Contributions welcome! Please read [CONTRIBUTING.md](CONTRIBUTING.md).
-    
+
     ## License
-    
+
     MIT License - see [LICENSE](LICENSE) file.
     ```
 
@@ -491,45 +491,45 @@ sphinx:
 
 ## 📋 Complete Checklist for Release
 
-Before publishing your package:
+!!! check-to-slot "Before publishing your package:"
 
-### Code Quality
-- [ ] All tests passing
-- [ ] Code coverage >80%
-- [ ] No linting errors
-- [ ] Type checking passes
-- [ ] Pre-commit hooks configured
-
-### Documentation
-- [ ] Comprehensive README.md
-- [ ] Usage examples
-- [ ] Installation instructions
-- [ ] API documentation
-- [ ] Changelog or release notes
-
-### Metadata
-- [ ] Appropriate version number
-- [ ] Correct dependencies and version constraints
-- [ ] Proper license
-- [ ] Keywords and classifiers
-- [ ] Project URLs (homepage, docs, issues)
-
-### Testing
-- [ ] Tested on multiple Python versions
-- [ ] Tested on different platforms (if relevant)
-- [ ] Test installation from built wheel
-
-### Security
-- [ ] No sensitive data in code
-- [ ] Dependencies checked for vulnerabilities
-- [ ] API tokens secured (not in git)
-
-### Legal
-- [ ] LICENSE file included
-- [ ] All code properly attributed
-- [ ] Dependencies' licenses compatible
-
-## 📋 Checkpoint: What Have We Achieved?
+    ### Code Quality
+    - [ ] All tests passing
+    - [ ] Code coverage >80%
+    - [ ] No linting errors
+    - [ ] Type checking passes
+    - [ ] Pre-commit hooks configured
+    
+    ### Documentation
+    - [ ] Comprehensive README.md
+    - [ ] Usage examples
+    - [ ] Installation instructions
+    - [ ] API documentation
+    - [ ] Changelog or release notes
+    
+    ### Metadata
+    - [ ] Appropriate version number
+    - [ ] Correct dependencies and version constraints
+    - [ ] Proper license
+    - [ ] Keywords and classifiers
+    - [ ] Project URLs (homepage, docs, issues)
+    
+    ### Testing
+    - [ ] Tested on multiple Python versions
+    - [ ] Tested on different platforms (if relevant)
+    - [ ] Test installation from built wheel
+    
+    ### Security
+    - [ ] No sensitive data in code
+    - [ ] Dependencies checked for vulnerabilities
+    - [ ] API tokens secured (not in git)
+    
+    ### Legal
+    - [ ] LICENSE file included
+    - [ ] All code properly attributed
+    - [ ] Dependencies' licenses compatible
+    
+    ## 📋 Checkpoint: What Have We Achieved?
 
 Verify you've successfully completed Episode 5:
 
