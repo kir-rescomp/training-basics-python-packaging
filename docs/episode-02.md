@@ -72,10 +72,12 @@ kir-pydemo gc-content ATGCATGC
 
 When you define a console script entry point:
 
+<div class="nord" markdown="1">
 ```toml
 [project.scripts]
 kir-pydemo = "kir_pydemo.cli:main"
 ```
+</div>
 
 Python packaging tools will:
 
@@ -88,7 +90,8 @@ Python packaging tools will:
 
 Before coding, let's design what we want our CLI to do:
 
-```bash
+<div class="dracula" markdown="1">
+```py
 # Calculate GC content
 kir-pydemo gc-content ATGCATGC
 # Output: GC content: 50.0%
@@ -104,6 +107,7 @@ kir-pydemo gc-content --file sequences.txt
 kir-pydemo --help
 kir-pydemo gc-content --help
 ```
+</div>
 
 This follows a **subcommand pattern** (like `git commit`, `git push`) which is common for tools with multiple operations.
 
