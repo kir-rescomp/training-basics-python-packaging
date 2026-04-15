@@ -513,8 +513,8 @@ git commit -m "Add new feature"
 ## 📋 Development Workflow
 
 A typical development session:
-
-```bash
+<div class="dracula" markdown="1">
+```py
 # 1. Activate virtual environment
 source venv/bin/activate
 
@@ -544,6 +544,7 @@ mypy src/
 git add .
 git commit -m "Add feature X"
 ```
+</div>
 
 ### Makefile for Common Tasks
 
