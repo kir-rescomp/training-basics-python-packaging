@@ -460,10 +460,10 @@ uv  pip install pip-tools
 echo "numpy>=1.20.0" > requirements.in
 
 # Generate requirements.txt (pinned)
-uv pip-compile requirements.in
+pip-compile requirements.in
 
 # Install exact versions
-uv pip-sync requirements.txt
+pip-sync requirements.txt
 ```
 </div>
 
