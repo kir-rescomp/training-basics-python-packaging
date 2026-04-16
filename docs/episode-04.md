@@ -174,17 +174,18 @@ xdg-open htmlcov/index.html  # Linux
 </div>
 
 **Output:**
+<div class="nord" markdown="1">
+```c
+Name                         Stmts   Miss  Cover
+------------------------------------------------
+src/kir_pydemo/__init__.py       3      0   100%
+src/kir_pydemo/cli.py           77     77     0%
+src/kir_pydemo/io.py            16     16     0%
+src/kir_pydemo/sequence.py      10      0   100%
+------------------------------------------------
+TOTAL                          106     93    12%
 ```
----------- coverage: platform linux, python 3.11.4 -----------
-Name                        Stmts   Miss  Cover
------------------------------------------------
-kir_pydemo/__init__.py          3      0   100%
-kir_pydemo/sequence.py         15      0   100%
-kir_pydemo/cli.py              45     25    44%
-kir_pydemo/io.py               12      6    50%
------------------------------------------------
-TOTAL                          75     31    59%
-```
+</div>
 
 !!! note "Coverage Goals"
     - **80%+** is good for most projects
