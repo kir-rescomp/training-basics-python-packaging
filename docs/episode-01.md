@@ -106,7 +106,7 @@ version = "0.1.0"
 
 There are two common project layouts. We'll use the **src/ layout** (recommended):
 
-```py
+```rust
 kir-pydemo/
 ├── src/
 │   └── kir_pydemo/          # Note: underscores in Python package names
