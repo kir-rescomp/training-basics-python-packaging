@@ -614,6 +614,58 @@ git commit -m "Add feature X"
 
 ??? file-circle-mark "Above might fail"
 
+    ```bash
+    tests/test_sequence.py:10: error: Function is missing a return type annotation  [no-untyped-def]
+    tests/test_sequence.py:10: note: Use "-> None" if function does not return a value
+    tests/test_sequence.py:17: error: Function is missing a return type annotation  [no-untyped-def]
+    tests/test_sequence.py:17: note: Use "-> None" if function does not return a value
+    tests/test_sequence.py:23: error: Function is missing a return type annotation  [no-untyped-def]
+    tests/test_sequence.py:23: note: Use "-> None" if function does not return a value
+    tests/test_sequence.py:28: error: Function is missing a return type annotation  [no-untyped-def]
+    tests/test_sequence.py:28: note: Use "-> None" if function does not return a value
+    tests/test_sequence.py:44: error: Function is missing a type annotation  [no-untyped-def]
+    tests/test_sequence.py:52: error: Function is missing a return type annotation  [no-untyped-def]
+    tests/test_sequence.py:52: note: Use "-> None" if function does not return a value
+    tests/test_sequence.py:58: error: Function is missing a return type annotation  [no-untyped-def]
+    tests/test_sequence.py:58: note: Use "-> None" if function does not return a value
+    tests/test_sequence.py:63: error: Function is missing a return type annotation  [no-untyped-def]
+    tests/test_sequence.py:63: note: Use "-> None" if function does not return a value
+    tests/test_sequence.py:68: error: Function is missing a return type annotation  [no-untyped-def]
+    tests/test_sequence.py:68: note: Use "-> None" if function does not return a value
+    tests/test_sequence.py:83: error: Function is missing a type annotation  [no-untyped-def]
+    tests/test_cli.py:10: error: Function is missing a type annotation  [no-untyped-def]
+    tests/test_cli.py:21: error: Function is missing a type annotation  [no-untyped-def]
+    tests/test_cli.py:32: error: Function is missing a type annotation  [no-untyped-def]
+    tests/test_cli.py:43: error: Function is missing a type annotation  [no-untyped-def]
+    Found 14 errors in 2 files (checked 2 source files)
+    ```
+
+    1. **Why ?** mypy is now checking your test files and complaining that test functions don't have type annotations.
+    2. **The Issue**
+        - `mypy` config has disallow_untyped_defs = true, which means every function must have type hints. Test functions like:
+            ```py
+            def test_basic_gc_content(self):  # ❌ Missing -> None
+                assert gc_content("ATGC") == 50.0
+            ```
+        - Need to be:
+            ```py
+            def test_basic_gc_content(self) -> None:  # ✅ Has return type
+                assert gc_content("ATGC") == 50.0
+            ```
+    3. **The Fix  ( Easiest) - Relax mypy Rules for Tests**
+        -  Add this to your mypy config in `pyproject.toml`
+        <div class="dracula" markdown="1">
+        ```toml
+        # NEW: Relax rules for test files
+        [[tool.mypy.overrides]]
+        module = "tests.*"
+        disallow_untyped_defs = false
+        disallow_incomplete_defs = false
+        ```
+        </div>
+
+
+
 ### Makefile for Common Tasks
 
 Create a `Makefile`:
