@@ -153,17 +153,7 @@ pytest -k "gc_content"
 ```
 </div>
 
-**Output:**
-<div class="nord" markdown="1">
-```py
-===================== test session starts ======================
-collected 12 items
 
-tests/test_sequence.py ............                      [100%]
-
-===================== 12 passed in 0.03s ======================
-```
-</div>
 
 ### Step 3: Code Coverage
 
