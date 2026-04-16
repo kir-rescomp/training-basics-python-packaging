@@ -404,6 +404,7 @@ def gc_content(sequence: str) -> float:
 
 Add to `pyproject.toml`:
 
+<div class="monokai" markdown="1">
 ```toml
 [tool.mypy]
 python_version = "3.9"
@@ -418,6 +419,7 @@ no_implicit_optional = true
 module = "Bio.*"
 ignore_missing_imports = true
 ```
+</div>
 
 ## 🪝 Pre-commit Hooks
 
