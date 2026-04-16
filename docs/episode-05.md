@@ -66,22 +66,26 @@ kir_pydemo - 0.1.0 - py3 - none - any .whl
 
 ### Step 1: Install Build Tools
 
-```bash
-pip install build twine
+<div class="dracula" markdown="1">
+```py
+uv pip install build twine
 ```
+</div>
 
 - **build**: Creates wheels and sdist
 - **twine**: Uploads packages to PyPI
 
 ### Step 2: Build the Distributions
 
-```bash
+<div class="dracula" markdown="1">
+```py
 # Build both wheel and source distribution
 python -m build
 
 # Output:
 # Successfully built kir_pydemo-0.1.0.tar.gz and kir_pydemo-0.1.0-py3-none-any.whl
 ```
+</div>
 
 This creates a `dist/` directory:
 
@@ -104,7 +108,8 @@ twine check dist/*
 
 ### Step 4: Test Install Locally
 
-```bash
+<div class="dracula" markdown="1">
+```py
 # Create a fresh virtual environment
 python -m venv test-env
 source test-env/bin/activate
@@ -120,6 +125,7 @@ kir-pydemo gc-content ATGC
 deactivate
 rm -rf test-env
 ```
+</div>
 
 ## 🔢 Semantic Versioning
 
@@ -219,7 +225,7 @@ twine upload dist/*
     ```bash
     pip search kir-pydemo  # Deprecated, use web search instead
     ```
-    Visit https://pypi.org/project/kir-pydemo to check.
+    Visit https://pypi.org/project/ to check.
 
 ### Using API Tokens (Recommended)
 
