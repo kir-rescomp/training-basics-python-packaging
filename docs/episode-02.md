@@ -566,4 +566,4 @@ This is crucial for making your package robust and easy to install!
 
 ---
 
-**Previous:** [← Episode 1: Project Structure](episode-01.md) | **Next:** [Episode 3: Dependencies & Environments →](episode-03.md)
+
