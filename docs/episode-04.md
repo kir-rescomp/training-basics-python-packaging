@@ -308,7 +308,7 @@ ruff format src/ tests/
 ```
 </div>
 
-!!! rectangle-list "Common issues it catches:"
+!!! magnifying-glass "Common issues it catches:"
 
     - Unused imports
     - Undefined variables
