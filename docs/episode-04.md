@@ -484,19 +484,88 @@ Now checks run automatically on `git commit`:
 ```py
 git add .
 git commit -m "Add new feature"
-
-# Output:
-# Trim Trailing Whitespace.............................Passed
-# Fix End of Files.....................................Passed
-# Check Yaml..........................................Passed
-# Check for added large files.........................Passed
-# Check Toml..........................................Passed
-# black................................................Passed
-# ruff.................................................Passed
-# ruff-format..........................................Passed
-# mypy.................................................Passed
 ```
 </div>
+??? success "Output"
+
+    ```
+    [WARNING] Unstaged files detected.
+    [INFO] Stashing unstaged files to /home/dinindu/.cache/pre-commit/patch1776361930-81948.
+    trim trailing whitespace.................................................Passed
+    fix end of files.........................................................Failed
+    - hook id: end-of-file-fixer
+    - exit code: 1
+    - files were modified by this hook
+
+    Fixing src/kir_pydemo.egg-info/dependency_links.txt
+    Fixing src/kir_pydemo.egg-info/SOURCES.txt
+
+    check yaml...............................................................Passed
+    check for added large files..............................................Passed
+    check toml...............................................................Passed
+    black....................................................................Failed
+    - hook id: black
+    - files were modified by this hook
+
+    reformatted src/kir_pydemo/io.py
+
+    All done! ✨ 🍰 ✨
+    1 file reformatted, 5 files left unchanged.
+
+    ruff.....................................................................Failed
+    - hook id: ruff
+    - files were modified by this hook
+
+    Found 7 errors (7 fixed, 0 remaining).
+
+    ruff-format..............................................................Passed
+    mypy.....................................................................Passed
+    [WARNING] Stashed changes conflicted with hook auto-fixes... Rolling back fixes...
+    [INFO] Restored changes from /home/dinindu/.cache/pre-commit/patch1776361930-81948.
+    ```
+
+    **What Pre-commit Did**
+    Pre-commit automatically fixed issues before allowing your commit:
+
+    - ✅ end-of-file-fixer - Added missing newlines at end of files
+    - ✅ black - Reformatted io.py to meet style standards
+    - ✅ ruff - Fixed 7 auto-fixable linting issues
+
+    **Why It "Failed"**
+    The hooks show as "Failed" because they modified your files. Pre-commit blocks the commit to let you review the automatic changes.
+    This is a safety feature - it prevents you from committing code that doesn't meet your quality standards.
+
+    **What To Do Next**
+    Now you need to stage the auto-fixed changes and commit again:
+    <div class="dracula" markdown="1">
+    ```c
+    # Stage the automatically fixed files
+    git add -u
+
+    # Or stage everything
+    git add .
+
+    # Try committing again
+    git commit -m "Add new feature"
+    ```
+
+    This time, it should pass! ✅
+
+    **Pro Tip**
+
+    You can see what changed:
+    <div class="draculae" markdown="1">
+    ```c
+    # See what the hooks modified
+    git diff
+
+    # Or if you already staged them
+    git diff --staged
+    ```
+
+    #### Pre-commit Workflow
+
+    ![pre-commut](./images/pre_commit_workflow.svg)
 
 !!! tip "Skip Hooks When Needed"
     ```bash
