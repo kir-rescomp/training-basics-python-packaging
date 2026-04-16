@@ -511,4 +511,3 @@ This will make your package production-ready!
 
 ---
 
-**Previous:** [← Episode 2: Entry Points](episode-02.md) | **Next:** [Episode 4: Testing & Quality →](episode-04.md)
