@@ -765,5 +765,3 @@ This will make your package ready for the world!
 - [pre-commit documentation](https://pre-commit.com/)
 
 ---
-
-**Previous:** [← Episode 3: Dependencies](episode-03.md) | **Next:** [Episode 5: Building & Distribution →](episode-05.md)
