@@ -468,17 +468,20 @@ repos:
 
 ### Step 3: Install the hooks
 
-```bash
+<div class="dracula" markdown="1">
+```py
 # Install pre-commit hooks
 pre-commit install
 
 # Run on all files (first time)
 pre-commit run --all-files
 ```
+</div>
 
 Now checks run automatically on `git commit`:
 
-```bash
+<div class="github-dark" markdown="1">
+```py
 git add .
 git commit -m "Add new feature"
 
@@ -493,6 +496,7 @@ git commit -m "Add new feature"
 # ruff-format..........................................Passed
 # mypy.................................................Passed
 ```
+</div>
 
 !!! tip "Skip Hooks When Needed"
     ```bash
