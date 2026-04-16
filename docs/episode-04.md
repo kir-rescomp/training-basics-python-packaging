@@ -187,7 +187,7 @@ TOTAL                          106     93    12%
 ```
 </div>
 
-!!! note "Coverage Goals"
+!!! bell "Coverage Goals"
     - **80%+** is good for most projects
     - **100%** is ideal but not always practical
     - Focus on testing critical paths, not just hitting 100%
