@@ -663,7 +663,13 @@ git commit -m "Add feature X"
         disallow_incomplete_defs = false
         ```
         </div>
-
+        
+    <div class="nord" markdown="1">
+    ```py
+    git add .
+    git commit -m "Add feature X"
+    ```
+    </div>
 
 
 ### Makefile for Common Tasks
