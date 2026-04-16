@@ -106,7 +106,7 @@ version = "0.1.0"
 
 There are two common project layouts. We'll use the **src/ layout** (recommended):
 
-```py
+```rust
 kir-pydemo/
 ├── src/
 │   └── kir_pydemo/          # Note: underscores in Python package names
@@ -306,6 +306,7 @@ classifiers = [
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
 ]
 
 [project.urls]
@@ -358,63 +359,65 @@ This section contains your package metadata:
 
 **`README.md`**
 
-```
-# kir-pydemo
+!!! book-atlas "README.md"
 
-A demonstration package for DNA sequence analysis, created as part of the Python Packaging Basics training series.
-
-## Features
-
-- Calculate GC content of DNA sequences
-- Generate reverse complement of DNA sequences
-
-## Installation
-
-    ```bash
-    uv pip install kir-pydemo
     ```
-```
+    # kir-pydemo
 
-## Usage
+    A demonstration package for DNA sequence analysis, created as part of the Python Packaging Basics training series.
 
-<div class="dracula" markdown="1">
-```python
-from kir_pydemo import gc_content, reverse_complement
+    ## Features
 
-# Calculate GC content
-sequence = "ATGCATGC"
-gc = gc_content(sequence)
-print(f"GC content: {gc}%")  # Output: GC content: 50.0%
+    - Calculate GC content of DNA sequences
+    - Generate reverse complement of DNA sequences
 
-# Get reverse complement
-rev_comp = reverse_complement(sequence)
-print(f"Reverse complement: {rev_comp}")  # Output: Reverse complement: GCATGCAT
-```
-</div>
+    ## Installation
 
-## License
+        ```bash
+        uv pip install kir-pydemo
+        ```
+    ```
 
-MIT
+    ## Usage
+
+    <div class="dracula" markdown="1">
+    ```python
+    from kir_pydemo import gc_content, reverse_complement
+
+    # Calculate GC content
+    sequence = "ATGCATGC"
+    gc = gc_content(sequence)
+    print(f"GC content: {gc}%")  # Output: GC content: 50.0%
+
+    # Get reverse complement
+    rev_comp = reverse_complement(sequence)
+    print(f"Reverse complement: {rev_comp}")  # Output: Reverse complement: GCATGCAT
+    ```
+    </div>
+
+    ## License
+
+    MIT
 
 
-### Step 5: Install in Editable Mode
+    ### Step 5: Install in Editable Mode
 
-Now comes the magic moment - installing your package!
+    Now comes the magic moment - installing your package!
 
-<div class="dracula" markdown="1">
-```py
-# Make sure you're in the kir-pydemo directory
-cd /path/to/kir-pydemo
-# Install in editable mode
-uv pip install -e .
-```
-</div>
+    <div class="dracula" markdown="1">
+    ```py
+    # Make sure you're in the kir-pydemo directory
+    cd /path/to/kir-pydemo
+    # Install in editable mode
+    uv pip install -e .
+    ```
+    </div>
 
-The `-e` flag means **editable mode** (also called **development mode**):
+    The `-e` flag means **editable mode** (also called **development mode**):
 
-- Changes to your source code are immediately reflected
-- No need to reinstall after each change
-- Perfect for development
+    - Changes to your source code are immediately reflected
+    - No need to reinstall after each change
+    - Perfect for development
 
 !!! warning "Virtual Environments"
     It's best practice to use a virtual environment:
@@ -495,5 +498,3 @@ This will introduce **entry points** and **console scripts** - making your packa
 
 </div>
 ---
-
-**Next:** [Episode 2: Entry Points & CLI Tools →](episode-02.md)

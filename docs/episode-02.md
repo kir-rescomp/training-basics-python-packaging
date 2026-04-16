@@ -308,6 +308,7 @@ classifiers = [
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
 ]
 
 # 🆕 NEW: Console scripts entry point
@@ -392,11 +393,12 @@ kir-pydemo --version
 
 Create a test file with sequences:
 
-```bash
+<div class="dracula" markdown="1">
+```py
 echo -e "ATGCATGC\nAAAAAAAA\nGGGGGGGG" > test_sequences.txt
 ```
 
-```bash
+```py
 # Process multiple sequences from file
 kir-pydemo gc-content --file test_sequences.txt
 
@@ -405,7 +407,7 @@ kir-pydemo gc-content --file test_sequences.txt
 # GC content: 0.00%
 # GC content: 100.00%
 ```
-
+</div>
 Perfect! Now users can analyze sequences without writing any Python code.
 
 ## 🎯 Understanding argparse
@@ -564,4 +566,4 @@ This is crucial for making your package robust and easy to install!
 
 ---
 
-**Previous:** [← Episode 1: Project Structure](episode-01.md) | **Next:** [Episode 3: Dependencies & Environments →](episode-03.md)
+

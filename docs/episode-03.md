@@ -357,7 +357,7 @@ uv pip install -e ".[dev]"
 
 ## 📝 requirements.txt vs pyproject.toml
 
-People often ask: "Should I use requirements.txt or pyproject.toml?"
+!!! circle-question "People often ask: "Should I use requirements.txt or pyproject.toml?""
 
 ### pyproject.toml (for libraries)
 
@@ -460,10 +460,10 @@ uv  pip install pip-tools
 echo "numpy>=1.20.0" > requirements.in
 
 # Generate requirements.txt (pinned)
-uv pip-compile requirements.in
+pip-compile requirements.in
 
 # Install exact versions
-uv pip-sync requirements.txt
+pip-sync requirements.txt
 ```
 </div>
 
@@ -511,4 +511,3 @@ This will make your package production-ready!
 
 ---
 
-**Previous:** [← Episode 2: Entry Points](episode-02.md) | **Next:** [Episode 4: Testing & Quality →](episode-04.md)

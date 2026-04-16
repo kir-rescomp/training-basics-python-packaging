@@ -105,7 +105,7 @@ class TestReverseComplement:
     
     def test_mixed_case(self):
         """Test mixed case handling."""
-        assert reverse_complement("AtGc") == "gcAt"
+        assert reverse_complement("AtGc") == "gCaT"
         assert reverse_complement("atgc") == "gcat"
     
     def test_empty_sequence(self):
@@ -153,17 +153,7 @@ pytest -k "gc_content"
 ```
 </div>
 
-**Output:**
-<div class="nord" markdown="1">
-```py
-===================== test session starts ======================
-collected 12 items
 
-tests/test_sequence.py ............                      [100%]
-
-===================== 12 passed in 0.03s ======================
-```
-</div>
 
 ### Step 3: Code Coverage
 
@@ -184,19 +174,20 @@ xdg-open htmlcov/index.html  # Linux
 </div>
 
 **Output:**
+<div class="nord" markdown="1">
+```c
+Name                         Stmts   Miss  Cover
+------------------------------------------------
+src/kir_pydemo/__init__.py       3      0   100%
+src/kir_pydemo/cli.py           77     77     0%
+src/kir_pydemo/io.py            16     16     0%
+src/kir_pydemo/sequence.py      10      0   100%
+------------------------------------------------
+TOTAL                          106     93    12%
 ```
----------- coverage: platform linux, python 3.11.4 -----------
-Name                        Stmts   Miss  Cover
------------------------------------------------
-kir_pydemo/__init__.py          3      0   100%
-kir_pydemo/sequence.py         15      0   100%
-kir_pydemo/cli.py              45     25    44%
-kir_pydemo/io.py               12      6    50%
------------------------------------------------
-TOTAL                          75     31    59%
-```
+</div>
 
-!!! note "Coverage Goals"
+!!! bell "Coverage Goals"
     - **80%+** is good for most projects
     - **100%** is ideal but not always practical
     - Focus on testing critical paths, not just hitting 100%
@@ -317,7 +308,7 @@ ruff format src/ tests/
 ```
 </div>
 
-!!! rectangle-list "Common issues it catches:"
+!!! magnifying-glass "Common issues it catches:"
 
     - Unused imports
     - Undefined variables
@@ -413,6 +404,7 @@ def gc_content(sequence: str) -> float:
 
 Add to `pyproject.toml`:
 
+<div class="monokai" markdown="1">
 ```toml
 [tool.mypy]
 python_version = "3.9"
@@ -427,6 +419,7 @@ no_implicit_optional = true
 module = "Bio.*"
 ignore_missing_imports = true
 ```
+</div>
 
 ## 🪝 Pre-commit Hooks
 
@@ -469,37 +462,110 @@ repos:
     rev: v1.8.0
     hooks:
       - id: mypy
-        additional_dependencies: [types-all]
+        
 ```
 </div>
 
 ### Step 3: Install the hooks
 
-```bash
+<div class="dracula" markdown="1">
+```py
 # Install pre-commit hooks
 pre-commit install
 
 # Run on all files (first time)
 pre-commit run --all-files
 ```
+</div>
 
 Now checks run automatically on `git commit`:
 
-```bash
+<div class="github-dark" markdown="1">
+```py
 git add .
 git commit -m "Add new feature"
-
-# Output:
-# Trim Trailing Whitespace.............................Passed
-# Fix End of Files.....................................Passed
-# Check Yaml..........................................Passed
-# Check for added large files.........................Passed
-# Check Toml..........................................Passed
-# black................................................Passed
-# ruff.................................................Passed
-# ruff-format..........................................Passed
-# mypy.................................................Passed
 ```
+</div>
+??? success "Output"
+
+    ```
+    [WARNING] Unstaged files detected.
+    [INFO] Stashing unstaged files to /home/dinindu/.cache/pre-commit/patch1776361930-81948.
+    trim trailing whitespace.................................................Passed
+    fix end of files.........................................................Failed
+    - hook id: end-of-file-fixer
+    - exit code: 1
+    - files were modified by this hook
+
+    Fixing src/kir_pydemo.egg-info/dependency_links.txt
+    Fixing src/kir_pydemo.egg-info/SOURCES.txt
+
+    check yaml...............................................................Passed
+    check for added large files..............................................Passed
+    check toml...............................................................Passed
+    black....................................................................Failed
+    - hook id: black
+    - files were modified by this hook
+
+    reformatted src/kir_pydemo/io.py
+
+    All done! ✨ 🍰 ✨
+    1 file reformatted, 5 files left unchanged.
+
+    ruff.....................................................................Failed
+    - hook id: ruff
+    - files were modified by this hook
+
+    Found 7 errors (7 fixed, 0 remaining).
+
+    ruff-format..............................................................Passed
+    mypy.....................................................................Passed
+    [WARNING] Stashed changes conflicted with hook auto-fixes... Rolling back fixes...
+    [INFO] Restored changes from /home/dinindu/.cache/pre-commit/patch1776361930-81948.
+    ```
+
+    **What Pre-commit Did**
+    Pre-commit automatically fixed issues before allowing your commit:
+
+    - ✅ end-of-file-fixer - Added missing newlines at end of files
+    - ✅ black - Reformatted io.py to meet style standards
+    - ✅ ruff - Fixed 7 auto-fixable linting issues
+
+    **Why It "Failed"**
+    The hooks show as "Failed" because they modified your files. Pre-commit blocks the commit to let you review the automatic changes.
+    This is a safety feature - it prevents you from committing code that doesn't meet your quality standards.
+
+    **What To Do Next**
+    Now you need to stage the auto-fixed changes and commit again:
+    <div class="dracula" markdown="1">
+    ```c
+    # Stage the automatically fixed files
+    git add -u
+
+    # Or stage everything
+    git add .
+
+    # Try committing again
+    git commit -m "Add new feature"
+    ```
+
+    This time, it should pass! ✅
+
+    **Pro Tip**
+
+    You can see what changed:
+    <div class="draculae" markdown="1">
+    ```c
+    # See what the hooks modified
+    git diff
+
+    # Or if you already staged them
+    git diff --staged
+    ```
+
+    #### Pre-commit Workflow
+
+    ![pre-commut](./images/pre_commit_workflow.svg)
 
 !!! tip "Skip Hooks When Needed"
     ```bash
@@ -546,12 +612,72 @@ git commit -m "Add feature X"
 ```
 </div>
 
+??? file-circle-mark "Above might fail"
+
+    ```bash
+    tests/test_sequence.py:10: error: Function is missing a return type annotation  [no-untyped-def]
+    tests/test_sequence.py:10: note: Use "-> None" if function does not return a value
+    tests/test_sequence.py:17: error: Function is missing a return type annotation  [no-untyped-def]
+    tests/test_sequence.py:17: note: Use "-> None" if function does not return a value
+    tests/test_sequence.py:23: error: Function is missing a return type annotation  [no-untyped-def]
+    tests/test_sequence.py:23: note: Use "-> None" if function does not return a value
+    tests/test_sequence.py:28: error: Function is missing a return type annotation  [no-untyped-def]
+    tests/test_sequence.py:28: note: Use "-> None" if function does not return a value
+    tests/test_sequence.py:44: error: Function is missing a type annotation  [no-untyped-def]
+    tests/test_sequence.py:52: error: Function is missing a return type annotation  [no-untyped-def]
+    tests/test_sequence.py:52: note: Use "-> None" if function does not return a value
+    tests/test_sequence.py:58: error: Function is missing a return type annotation  [no-untyped-def]
+    tests/test_sequence.py:58: note: Use "-> None" if function does not return a value
+    tests/test_sequence.py:63: error: Function is missing a return type annotation  [no-untyped-def]
+    tests/test_sequence.py:63: note: Use "-> None" if function does not return a value
+    tests/test_sequence.py:68: error: Function is missing a return type annotation  [no-untyped-def]
+    tests/test_sequence.py:68: note: Use "-> None" if function does not return a value
+    tests/test_sequence.py:83: error: Function is missing a type annotation  [no-untyped-def]
+    tests/test_cli.py:10: error: Function is missing a type annotation  [no-untyped-def]
+    tests/test_cli.py:21: error: Function is missing a type annotation  [no-untyped-def]
+    tests/test_cli.py:32: error: Function is missing a type annotation  [no-untyped-def]
+    tests/test_cli.py:43: error: Function is missing a type annotation  [no-untyped-def]
+    Found 14 errors in 2 files (checked 2 source files)
+    ```
+
+    1. **Why ?** mypy is now checking your test files and complaining that test functions don't have type annotations.
+    2. **The Issue**
+        - `mypy` config has disallow_untyped_defs = true, which means every function must have type hints. Test functions like:
+            ```py
+            def test_basic_gc_content(self):  # ❌ Missing -> None
+                assert gc_content("ATGC") == 50.0
+            ```
+        - Need to be:
+            ```py
+            def test_basic_gc_content(self) -> None:  # ✅ Has return type
+                assert gc_content("ATGC") == 50.0
+            ```
+    3. **The Fix  ( Easiest) - Relax mypy Rules for Tests**
+        -  Add this to your mypy config in `pyproject.toml`
+        <div class="dracula" markdown="1">
+        ```toml
+        # NEW: Relax rules for test files
+        [[tool.mypy.overrides]]
+        module = "tests.*"
+        disallow_untyped_defs = false
+        disallow_incomplete_defs = false
+        ```
+        </div>
+
+    <div class="nord" markdown="1">
+    ```py
+    git add .
+    git commit -m "Add feature X"
+    ```
+    </div>
+
+
 ### Makefile for Common Tasks
 
 Create a `Makefile`:
 <div class="nord" markdown="1">
 ```yaml
-.PHONY: test coverage format lint type-check clean install
+.PHONY: install test coverage format lint type-check clean all
 
 install:
 	pip install -e ".[dev]"
@@ -639,5 +765,3 @@ This will make your package ready for the world!
 - [pre-commit documentation](https://pre-commit.com/)
 
 ---
-
-**Previous:** [← Episode 3: Dependencies](episode-03.md) | **Next:** [Episode 5: Building & Distribution →](episode-05.md)
