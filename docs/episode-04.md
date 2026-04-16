@@ -105,7 +105,7 @@ class TestReverseComplement:
     
     def test_mixed_case(self):
         """Test mixed case handling."""
-        assert reverse_complement("AtGc") == "gcAt"
+        assert reverse_complement("AtGc") == "gCaT"
         assert reverse_complement("atgc") == "gcat"
     
     def test_empty_sequence(self):
