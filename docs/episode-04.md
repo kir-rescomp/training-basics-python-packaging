@@ -663,7 +663,7 @@ git commit -m "Add feature X"
         disallow_incomplete_defs = false
         ```
         </div>
-        
+
     <div class="nord" markdown="1">
     ```py
     git add .
@@ -677,7 +677,7 @@ git commit -m "Add feature X"
 Create a `Makefile`:
 <div class="nord" markdown="1">
 ```yaml
-.PHONY: test coverage format lint type-check clean install
+.PHONY: install test coverage format lint type-check clean all
 
 install:
 	pip install -e ".[dev]"
