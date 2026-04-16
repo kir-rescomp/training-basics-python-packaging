@@ -357,7 +357,7 @@ uv pip install -e ".[dev]"
 
 ## 📝 requirements.txt vs pyproject.toml
 
-People often ask: "Should I use requirements.txt or pyproject.toml?"
+!!! circle-question "People often ask: "Should I use requirements.txt or pyproject.toml?""
 
 ### pyproject.toml (for libraries)
 
