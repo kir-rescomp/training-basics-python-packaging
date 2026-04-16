@@ -497,5 +497,3 @@ This will introduce **entry points** and **console scripts** - making your packa
 
 </div>
 ---
-
-**Next:** [Episode 2: Entry Points & CLI Tools →](episode-02.md)
