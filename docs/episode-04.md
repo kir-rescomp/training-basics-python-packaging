@@ -462,7 +462,7 @@ repos:
     rev: v1.8.0
     hooks:
       - id: mypy
-        additional_dependencies: [types-all]
+        
 ```
 </div>
 
