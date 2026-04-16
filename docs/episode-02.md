@@ -393,11 +393,12 @@ kir-pydemo --version
 
 Create a test file with sequences:
 
-```bash
+<div class="dracula" markdown="1">
+```py
 echo -e "ATGCATGC\nAAAAAAAA\nGGGGGGGG" > test_sequences.txt
 ```
 
-```bash
+```py
 # Process multiple sequences from file
 kir-pydemo gc-content --file test_sequences.txt
 
@@ -406,7 +407,7 @@ kir-pydemo gc-content --file test_sequences.txt
 # GC content: 0.00%
 # GC content: 100.00%
 ```
-
+</div>
 Perfect! Now users can analyze sequences without writing any Python code.
 
 ## 🎯 Understanding argparse
