@@ -131,3 +131,4 @@ extra_css:
   - stylesheets/code_block_colour_nord.css
   - stylesheets/code_block_colour_onedark.css
   - stylesheets/side_bar_menu.css
+  - stylesheets/indexpage_episodes_cards.css

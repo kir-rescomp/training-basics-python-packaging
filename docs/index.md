@@ -25,77 +25,120 @@
 
 ## Episodes
 
-<div class="grid cards" markdown>
+<div class="kp-episode-grid">
 
--   __[Episode 1: Project Structure & pyproject.toml](episode-01.md)__
+  <a href="episode-01/" class="kp-card kp-ep1">
+    <div class="kp-header">
+      <div class="kp-num">01</div>
+      <div class="kp-meta">
+        <div class="kp-label">Project structure</div>
+        <p class="kp-title">pyproject.toml &amp; the src/ layout</p>
+      </div>
+      <span class="kp-duration">~45 min</span>
+    </div>
+    <div class="kp-body">
+      <ul class="kp-topics">
+        <li>pyproject.toml vs setup.py</li>
+        <li>The src/ layout pattern</li>
+        <li>Package metadata &amp; configuration</li>
+        <li>Installing in editable mode</li>
+      </ul>
+    </div>
+    <div class="kp-footer">
+      <div class="kp-footer-label">You'll create</div>
+      <div class="kp-footer-val">A basic installable package</div>
+    </div>
+  </a>
 
-    ---
-    **Duration:** ~45 minutes
-    
-    Learn the foundation of modern Python packaging:
+  <a href="episode-02/" class="kp-card kp-ep2">
+    <div class="kp-header">
+      <div class="kp-num">02</div>
+      <div class="kp-meta">
+        <div class="kp-label">CLI tools</div>
+        <p class="kp-title">Entry points &amp; argument parsing</p>
+      </div>
+      <span class="kp-duration">~30 min</span>
+    </div>
+    <div class="kp-body">
+      <ul class="kp-topics">
+        <li>Console scripts &amp; entry points</li>
+        <li>Command-line argument parsing</li>
+        <li>Building user-friendly CLIs</li>
+      </ul>
+    </div>
+    <div class="kp-footer">
+      <div class="kp-footer-label">You'll create</div>
+      <div class="kp-footer-val">CLI tools for sequence analysis</div>
+    </div>
+  </a>
 
-    - Understanding pyproject.toml vs setup.py
-    - The src/ layout pattern
-    - Package metadata and configuration
-    - Installing in editable mode
+  <a href="episode-03/" class="kp-card kp-ep3">
+    <div class="kp-header">
+      <div class="kp-num">03</div>
+      <div class="kp-meta">
+        <div class="kp-label">Dependencies</div>
+        <p class="kp-title">Environments &amp; dependency management</p>
+      </div>
+      <span class="kp-duration">~40 min</span>
+    </div>
+    <div class="kp-body">
+      <ul class="kp-topics">
+        <li>Specifying dependencies in pyproject.toml</li>
+        <li>Optional dependencies &amp; extras</li>
+        <li>Virtual environment best practices</li>
+        <li>Lock files &amp; reproducibility</li>
+      </ul>
+    </div>
+    <div class="kp-footer">
+      <div class="kp-footer-label">You'll create</div>
+      <div class="kp-footer-val">A properly managed dependency structure</div>
+    </div>
+  </a>
 
-    **You'll create:** A basic installable package
-    
--   __[Episode 2: Entry Points & CLI Tools](episode-02.md)__
+  <a href="episode-04/" class="kp-card kp-ep4">
+    <div class="kp-header">
+      <div class="kp-num">04</div>
+      <div class="kp-meta">
+        <div class="kp-label">Testing &amp; quality</div>
+        <p class="kp-title">pytest, ruff, mypy &amp; pre-commit</p>
+      </div>
+      <span class="kp-duration">~50 min</span>
+    </div>
+    <div class="kp-body">
+      <ul class="kp-topics">
+        <li>Adding tests with pytest</li>
+        <li>Code formatting with ruff/black</li>
+        <li>Type checking with mypy</li>
+        <li>Pre-commit hooks for automation</li>
+      </ul>
+    </div>
+    <div class="kp-footer">
+      <div class="kp-footer-label">You'll create</div>
+      <div class="kp-footer-val">A tested, quality-controlled package</div>
+    </div>
+  </a>
 
-    ---
-    **Duration:** ~30 minutes
+  <a href="episode-05/" class="kp-card kp-ep5">
+    <div class="kp-header">
+      <div class="kp-num">05</div>
+      <div class="kp-meta">
+        <div class="kp-label">Distribution</div>
+        <p class="kp-title">Building, versioning &amp; publishing to PyPI</p>
+      </div>
+      <span class="kp-duration">~45 min</span>
+    </div>
+    <div class="kp-body">
+      <ul class="kp-topics">
+        <li>Building wheels &amp; source distributions</li>
+        <li>Version management strategies</li>
+        <li>Publishing to PyPI</li>
+        <li>Documentation with Sphinx</li>
+      </ul>
+    </div>
+    <div class="kp-footer">
+      <div class="kp-footer-label">You'll create</div>
+      <div class="kp-footer-val">A published, documented package</div>
+    </div>
+  </a>
 
-    Make your package executable from the command line:
-
-    - Console scripts and entry points
-    - Command-line argument parsing
-    - Building user-friendly CLIs
-
-    **You'll create:** Command-line tools for sequence analysis
-
-   
-
--   __[Episode 3: Dependencies & Environments](episode-03.md)__
-
-    ---
-    **Duration:** ~40 minutes
-
-    Master dependency management:
-
-    - Specifying dependencies in pyproject.toml
-    - Optional dependencies and extras
-    - Virtual environments best practices
-    - Lock files and reproducibility
-
-    **You'll create:** A properly managed dependency structure
-
-    
-
--   __[Episode 4: Testing & Quality](episode-04.md)__
-
-    ---
-    **Duration:** ~50 minutes
-
-    Ensure code quality and reliability:
-
-    - Adding tests with pytest
-    - Code formatting with black/ruff
-    - Type checking with mypy
-    - Pre-commit hooks for automation
-
-    **You'll create:** A tested, quality-controlled package
-
-  
-
--   __[Episode 5: Building & Distribution](episode-05.md)__
-
-    ---
-    **Duration:** ~45 minutes
-
-    Share your package with the world:
-
-    - Building wheels and source distributions
-    - Version management strategies
-    - Publishing to PyPI
-    - Documentation with Sphinx
+</div>
