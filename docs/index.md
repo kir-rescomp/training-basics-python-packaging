@@ -23,7 +23,6 @@
     <img src="./images/python_packaging.png" alt="drawing" width="300">
 </p>
 
-## Episodes
 
 <div class="kp-episode-grid">
 
