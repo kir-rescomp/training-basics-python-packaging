@@ -99,3 +99,5 @@
     - Version management strategies
     - Publishing to PyPI
     - Documentation with Sphinx
+
+</div>
