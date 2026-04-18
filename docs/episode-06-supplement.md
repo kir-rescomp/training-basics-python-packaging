@@ -48,7 +48,7 @@ The enhanced version is:
 pip install rich
 ```
 
-## 🔧 Adding Rich to kir-pydemo
+## 🔧 Adding `rich` to `kir-pydemo`
 
 ### Step 1: Make It an Optional Dependency
 
@@ -80,6 +80,8 @@ pip install kir-pydemo[cli-extras]
 The CLI should work **with or without** rich installed.
 
 **Pattern:**
+
+<div class="nord" markdown="1">
 ```python
 # At the top of cli.py
 try:
@@ -99,6 +101,7 @@ def print_success(message: str):
     else:
         print(f"✓ {message}")
 ```
+</div>
 
 This way:
 - ✅ Works great with `rich` installed
