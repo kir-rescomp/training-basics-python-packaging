@@ -144,6 +144,7 @@
 
 ---
 
+## Supplementary
 
 <div class="kp-episode-grid">
 
@@ -158,15 +159,12 @@
     </div>
     <div class="kp-body">
       <ul class="kp-topics">
-        <li>pyproject.toml vs setup.py</li>
-        <li>The src/ layout pattern</li>
-        <li>Package metadata &amp; configuration</li>
-        <li>Installing in editable mode</li>
+        <li>add colors, tables, &amp; formatted output to your command-line interface.</li>
       </ul>
     </div>
     <div class="kp-footer">
       <div class="kp-footer-label">You'll create</div>
-      <div class="kp-footer-val"></div>
+      <div class="kp-footer-val">Elevated CLI for pypackges</div>
     </div>
   </a>
 
