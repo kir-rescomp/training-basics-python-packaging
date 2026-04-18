@@ -54,6 +54,7 @@ pip install rich
 
 Edit `pyproject.toml`:
 
+<div class="nord" markdown="1">
 ```toml
 [project.optional-dependencies]
 bio = ["biopython>=1.80"]
@@ -67,6 +68,7 @@ dev = [
     "mypy>=1.5.0",
 ]
 ```
+</div>
 
 Now users can install it with:
 ```bash
