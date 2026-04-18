@@ -104,6 +104,7 @@ def print_success(message: str):
 </div>
 
 This way:
+
 - ✅ Works great with `rich` installed
 - ✅ Still works fine without it (plain text)
 - ✅ No crashes or ImportErrors

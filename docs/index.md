@@ -141,3 +141,33 @@
   </a>
 
 </div>
+
+---
+
+
+<div class="kp-episode-grid">
+
+  <a href="episode-06-supplement/" class="kp-card kp-ep1">
+    <div class="kp-header">
+      <div class="kp-num">S.01</div>
+      <div class="kp-meta">
+        <div class="kp-label">Rich Text</div>
+        <p class="kp-title">Richer CLI outputs with <code>rich</code></p>
+      </div>
+      <span class="kp-duration">~30 min</span>
+    </div>
+    <div class="kp-body">
+      <ul class="kp-topics">
+        <li>pyproject.toml vs setup.py</li>
+        <li>The src/ layout pattern</li>
+        <li>Package metadata &amp; configuration</li>
+        <li>Installing in editable mode</li>
+      </ul>
+    </div>
+    <div class="kp-footer">
+      <div class="kp-footer-label">You'll create</div>
+      <div class="kp-footer-val"></div>
+    </div>
+  </a>
+
+</div>
