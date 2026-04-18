@@ -8,21 +8,24 @@
 Compare these two outputs:
 
 **Plain:**
-```
+<div class="nord" markdown="1">
+```py
 Processing file1.txt
 Processing file2.txt
 Error: file3.txt not found
 Done. Processed 2 files.
 ```
 
+
 **Enhanced:**
-```
+```rust
 ✓ Processing file1.txt
 ✓ Processing file2.txt
 ✗ Error: file3.txt not found
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ✓ Done. Processed 2 files.
 ```
+</div>
 
 The enhanced version is:
 - **Easier to scan** - symbols and colors help spot issues quickly
