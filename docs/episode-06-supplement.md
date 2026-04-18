@@ -1,6 +1,6 @@
 # Supplementary: Making Your CLI Beautiful
 
-!!! note "Supplementary Material"
+!!! note-sticky "Supplementary Material"
     This is bonus content that builds on **Episode 2: Entry Points & CLI Tools**. It shows how to add colors, tables, and formatted output to your command-line interface.
 
 ## 🎨 Why Beautiful CLIs Matter
