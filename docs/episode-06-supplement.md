@@ -37,6 +37,7 @@ The enhanced version is:
 [`rich`](https://rich.readthedocs.io/) is a Python library for rich text and beautiful formatting in the terminal.
 
 **Features:**
+
 - ✅ Cross-platform color support (Windows, Mac, Linux)
 - ✅ Tables, progress bars, syntax highlighting
 - ✅ Panels, columns, and layout
