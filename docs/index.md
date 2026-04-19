@@ -131,7 +131,26 @@
         <li>Building wheels &amp; source distributions</li>
         <li>Version management strategies</li>
         <li>Publishing to PyPI</li>
-        <li>Documentation with Sphinx</li>
+      </ul>
+    </div>
+    <div class="kp-footer">
+      <div class="kp-footer-label">You'll create</div>
+      <div class="kp-footer-val">A published, documented package</div>
+    </div>
+  </a>
+
+  <a href="episode-05b/" class="kp-card kp-ep5">
+    <div class="kp-header">
+      <div class="kp-num">05.b</div>
+      <div class="kp-meta">
+        <div class="kp-label">Distribution</div>
+        <p class="kp-title">Documentation</p>
+      </div>
+      <span class="kp-duration">~45 min</span>
+    </div>
+    <div class="kp-body">
+      <ul class="kp-topics">
+        <li>Documentation with <code>mkdocs-material</code></li>
       </ul>
     </div>
     <div class="kp-footer">
@@ -148,7 +167,7 @@
 
 <div class="kp-episode-grid">
 
-  <a href="episode-06-supplement/" class="kp-card kp-ep1">
+  <a href="episode-07-supplement/" class="kp-card kp-ep1">
     <div class="kp-header">
       <div class="kp-num">S.01</div>
       <div class="kp-meta">
