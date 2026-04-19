@@ -444,7 +444,7 @@ Now when you create a release on GitHub, it automatically publishes to PyPI!
 
     ## License
 
-    MIT License - see [LICENSE](LICENSE.md) file.
+    MIT License - see ( link to LICENSE.md) file.
     ```
 
 ### Sphinx Documentation
