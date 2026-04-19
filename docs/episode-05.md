@@ -440,7 +440,7 @@ Now when you create a release on GitHub, it automatically publishes to PyPI!
 
     ## Contributing
 
-    Contributions welcome! Please read [CONTRIBUTING.md](CONTRIBUTING.md).
+    Contributions welcome! Please read ( link to CONTRIBUTING.md).
 
     ## License
 
