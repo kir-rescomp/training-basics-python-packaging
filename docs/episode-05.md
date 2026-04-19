@@ -440,11 +440,11 @@ Now when you create a release on GitHub, it automatically publishes to PyPI!
 
     ## Contributing
 
-    Contributions welcome! Please read [CONTRIBUTING.md](CONTRIBUTING.md).
+    Contributions welcome! Please read ( link to CONTRIBUTING.md).
 
     ## License
 
-    MIT License - see [LICENSE](LICENSE.md) file.
+    MIT License - see ( link to LICENSE.md) file.
     ```
 
 ### Sphinx Documentation
